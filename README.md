@@ -1,2 +1,2 @@
 # R-Techniques
-Storage of Data Analysis Projects in R 
+This repository is a showcase of various R techquies for exploratory data analysis, useful visualization techniques, and predictive analysis processes.  
