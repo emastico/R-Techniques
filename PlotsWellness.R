@@ -1,3 +1,4 @@
+#NotesOnTheGraph
 #theme_bw()
 #theme_classic()
 #ChangeName
@@ -6,7 +7,7 @@
 
 library(forcats)
 attach(data)
-data %>%
+data %>% #GraphforQualitativeData
   mutate(name = fct_reorder(name, frequency)) %>%
   ggplot(aes(x=name, y=frequency, fill=as.factor(name))) + 
     geom_bar(stat="identity") +
@@ -22,8 +23,8 @@ data %>%
       plot.title = element_text(hjust=0.5, lineheight=0.9),
       plot.caption=element_text(color="#3969AC", face="italic")
     )
-#hjust=1:placetitleonright
-#hjust=2:placestitleonleft
+      #hjust=1:placetitleonright
+      #hjust=2:placestitleonleft
 library(wordcloud2)
 attach(Buzzwords_for_Wellness_)
 wordcloud2(Buzzwords_for_Wellness_, size=1.6, color='random-dark')
